@@ -1,0 +1,126 @@
+{
+  "access_dt": null, 
+  "attributes": null, 
+  "cite_metadata": null, 
+  "contributors": [
+    {
+      "href": "https://localhost:3000/contributor/4366.json", 
+      "id": 4366, 
+      "organization": {
+        "country_code": "US", 
+        "identifier": "earth-resources-observation-science-center", 
+        "name": "Earth Resources Observation and Science Center", 
+        "organization_type_identifier": "federal", 
+        "url": "https://eros.usgs.gov"
+      }, 
+      "organization_uri": "/organization/earth-resources-observation-science-center", 
+      "person": {}, 
+      "person_id": null, 
+      "person_uri": null, 
+      "role_type_identifier": "data_archive", 
+      "uri": "/contributor/4366"
+    }, 
+    {
+      "href": "https://localhost:3000/contributor/3695.json", 
+      "id": 3695, 
+      "organization": {
+        "country_code": "US", 
+        "identifier": "national-aeronautics-space-administration", 
+        "name": "National Aeronautics and Space Administration", 
+        "organization_type_identifier": "federal", 
+        "url": "http://www.nasa.gov"
+      }, 
+      "organization_uri": "/organization/national-aeronautics-space-administration", 
+      "person": {}, 
+      "person_id": null, 
+      "person_uri": null, 
+      "role_type_identifier": "funding_agency", 
+      "uri": "/contributor/3695"
+    }, 
+    {
+      "href": "https://localhost:3000/contributor/3440.json", 
+      "id": 3440, 
+      "organization": {
+        "country_code": "US", 
+        "identifier": "us-geological-survey", 
+        "name": "U.S. Geological Survey", 
+        "organization_type_identifier": "federal", 
+        "url": "http://www.usgs.gov/"
+      }, 
+      "organization_uri": "/organization/us-geological-survey", 
+      "person": {}, 
+      "person_id": null, 
+      "person_uri": null, 
+      "role_type_identifier": "distributor", 
+      "uri": "/contributor/3440"
+    }, 
+    {
+      "href": "https://localhost:3000/contributor/3713.json", 
+      "id": 3713, 
+      "organization": {
+        "country_code": "US", 
+        "identifier": "national-aeronautics-space-administration", 
+        "name": "National Aeronautics and Space Administration", 
+        "organization_type_identifier": "federal", 
+        "url": "http://www.nasa.gov"
+      }, 
+      "organization_uri": "/organization/national-aeronautics-space-administration", 
+      "person": {}, 
+      "person_id": null, 
+      "person_uri": null, 
+      "role_type_identifier": "contributor", 
+      "uri": "/contributor/3713"
+    }
+  ], 
+  "data_qualifier": null, 
+  "description": "LandSat 5 TM", 
+  "description_attribution": null, 
+  "doi": null, 
+  "end_time": "2012-05-01T00:00:00", 
+  "files": [], 
+  "href": "https://localhost:3000/dataset/nasa-landsat-5-tm.json", 
+  "identifier": "nasa-landsat-5-tm", 
+  "instrument_measurements": [], 
+  "lat_max": null, 
+  "lat_min": null, 
+  "lon_max": null, 
+  "lon_min": null, 
+  "name": null, 
+  "native_id": null, 
+  "parents": [
+    {
+      "activity_uri": "/activity/create-urban-heat-island-image", 
+      "label": "platform landsat-5", 
+      "note": "", 
+      "publication_type_identifier": "platform", 
+      "relationship": "prov:wasDerivedFrom", 
+      "url": "/platform/landsat-5"
+    }, 
+    {
+      "activity_uri": null, 
+      "label": "instrument thematic-mapper", 
+      "note": "", 
+      "publication_type_identifier": "instrument", 
+      "relationship": "prov:wasDerivedFrom", 
+      "url": "/instrument/thematic-mapper"
+    }
+  ], 
+  "processing_level": null, 
+  "publication_year": 2003, 
+  "references": [], 
+  "release_dt": null, 
+  "scale": null, 
+  "scope": null, 
+  "spatial_extent": null, 
+  "spatial_ref_sys": null, 
+  "spatial_res": null, 
+  "start_time": "1982-11-13T00:00:00", 
+  "temporal_extent": null, 
+  "temporal_resolution": null, 
+  "type": null, 
+  "uri": "/dataset/nasa-landsat-5-tm", 
+  "url": null, 
+  "variables": null, 
+  "version": null, 
+  "vertical_extent": null
+}

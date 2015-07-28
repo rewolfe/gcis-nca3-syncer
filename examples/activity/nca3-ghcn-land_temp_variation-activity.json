@@ -1,0 +1,17 @@
+{
+  "computing_environment": null, 
+  "data_usage": null, 
+  "duration": null, 
+  "end_time": null, 
+  "href": "https://localhost:3000/activity/nca3-ghcn-land_temp_variation-activity.json", 
+  "identifier": "nca3-ghcn-land_temp_variation-activity", 
+  "methodologies": [], 
+  "methodology": null, 
+  "notes": "Downloaded the data from http://www.ncdc.noaa.gov/monitoring-references/faq/anomalies.php. Opened in Excel. Plotted the black line. Used the linear trend function to plot the red line. Then divided the time series up into shorter chunks that would illustrate the variability of short-term temperature trends (being both above and below the long-term trend) and once again used the linear trend function to plot the blue lines.", 
+  "output_artifacts": null, 
+  "publication_maps": [], 
+  "software": null, 
+  "start_time": null, 
+  "uri": "/activity/nca3-ghcn-land_temp_variation-activity", 
+  "visualization_software": null
+}

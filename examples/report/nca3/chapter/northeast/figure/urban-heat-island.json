@@ -1,0 +1,95 @@
+{
+  "attributes": null, 
+  "caption": "Surface temperatures in New York City on a summer\u2019s day show the \u201curban heat island,\u201d with temperatures in populous urban areas being approximately 10\u00b0F higher than the forested parts of Central Park. Dark blue reflects the colder waters of the Hudson and East Rivers. (Figure source: Center for Climate Systems Research, Columbia University).", 
+  "chapter": {
+    "doi": "10.7930/J0SF2T3P", 
+    "identifier": "northeast", 
+    "number": 16, 
+    "report_identifier": "nca3", 
+    "sort_key": 160, 
+    "title": "Northeast", 
+    "url": "http://nca2014.globalchange.gov/report/regions/northeast"
+  }, 
+  "chapter_identifier": "northeast", 
+  "contributors": [
+    {
+      "href": "https://localhost:3000/contributor/3802.json", 
+      "id": 3802, 
+      "organization": {
+        "country_code": "US", 
+        "identifier": "columbia-university", 
+        "name": "Columbia University", 
+        "organization_type_identifier": "academic", 
+        "url": "http://www.columbia.edu/"
+      }, 
+      "organization_uri": "/organization/columbia-university", 
+      "person": {
+        "first_name": "Daniel", 
+        "id": 2233, 
+        "last_name": "Bader", 
+        "middle_name": null, 
+        "orcid": null, 
+        "url": null
+      }, 
+      "person_id": 2233, 
+      "person_uri": "/person/2233", 
+      "role_type_identifier": "point_of_contact", 
+      "uri": "/contributor/3802"
+    }
+  ], 
+  "create_dt": null, 
+  "files": [
+    {
+      "file": "55/35/23c9a12b2394cb0b0b968bdcfded/NE_urban_heat_island_V4.png", 
+      "href": "https://localhost:3000/assets/55/35/23c9a12b2394cb0b0b968bdcfded/NE_urban_heat_island_V4.png", 
+      "identifier": "f2e52936-0e84-44d8-a537-9a6c0890330a", 
+      "landing_page": null, 
+      "location": null, 
+      "mime_type": "image/png", 
+      "sha1": "c87968c3ea3c248ccedae753a3de9b73dd2daa0d", 
+      "size": 2173477, 
+      "thumbnail": "55/35/23c9a12b2394cb0b0b968bdcfded/.thumb-f2e52936-0e84-44d8-a537-9a6c0890330a.png", 
+      "thumbnail_href": "https://gmanipon:aea316d10d3e3dc7c6cd7531c9dc3c12b335e5fc55b79ea4@localhost:3000/assets/55/35/23c9a12b2394cb0b0b968bdcfded/.thumb-f2e52936-0e84-44d8-a537-9a6c0890330a.png", 
+      "uri": "/file/f2e52936-0e84-44d8-a537-9a6c0890330a", 
+      "url": "/assets/55/35/23c9a12b2394cb0b0b968bdcfded/NE_urban_heat_island_V4.png"
+    }
+  ], 
+  "href": "https://localhost:3000/report/nca3/chapter/northeast/figure/urban-heat-island.json", 
+  "identifier": "urban-heat-island", 
+  "images": [
+    {
+      "attributes": null, 
+      "create_dt": null, 
+      "description": "Image generated from granule: http://earthexplorer.usgs.gov/order/process?node=EC&dataset_name=LANDSAT_TM&ordered=LT50130322003182LGS01", 
+      "identifier": "f27374a2-d4ef-479c-8f96-9de23fedfc3e", 
+      "lat_max": null, 
+      "lat_min": null, 
+      "lon_max": null, 
+      "lon_min": null, 
+      "position": null, 
+      "submission_dt": null, 
+      "time_end": null, 
+      "time_start": null, 
+      "title": "Urban Heat Island", 
+      "url": null, 
+      "usage_limits": null
+    }
+  ], 
+  "kindred_figures": [], 
+  "lat_max": "41.27462", 
+  "lat_min": "39.38844", 
+  "lon_max": "-72.00942", 
+  "lon_min": "-74.65037", 
+  "ordinal": 5, 
+  "parents": [], 
+  "references": [], 
+  "report_identifier": "nca3", 
+  "source_citation": "Center for Climate Systems Research, Columbia University", 
+  "submission_dt": null, 
+  "time_end": "2003-07-01T15:10:05", 
+  "time_start": "2003-07-01T15:09:38", 
+  "title": "Urban Heat Island", 
+  "uri": "/report/nca3/chapter/northeast/figure/urban-heat-island", 
+  "url": null, 
+  "usage_limits": "Copyright protected. Obtain permission from the original figure source."
+}

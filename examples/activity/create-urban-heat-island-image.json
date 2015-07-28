@@ -1,0 +1,36 @@
+{
+  "computing_environment": null, 
+  "data_usage": "K1 = 666.09 K2 = 1282.71 ; CONVERSION ; To radiance L_lam = G_resc * b6 + B_resc ; To brightness temperature T6 = K2 / alog ( (K1 / L_lam) + 1 )   where b6 is the original band-6 data.", 
+  "duration": null, 
+  "end_time": null, 
+  "href": "https://localhost:3000/activity/create-urban-heat-island-image.json", 
+  "identifier": "create-urban-heat-island-image", 
+  "methodologies": [], 
+  "methodology": null, 
+  "notes": null, 
+  "output_artifacts": "/image/f27374a2-d4ef-479c-8f96-9de23fedfc3e", 
+  "publication_maps": [
+    {
+      "activity_identifier": "create-urban-heat-island-image", 
+      "child": 16606, 
+      "child_uri": "/publication/16606", 
+      "note": "", 
+      "parent": 18362, 
+      "parent_uri": "/publication/18362", 
+      "relationship": "prov:wasDerivedFrom"
+    }, 
+    {
+      "activity_identifier": "create-urban-heat-island-image", 
+      "child": 18362, 
+      "child_uri": "/publication/18362", 
+      "note": "", 
+      "parent": 15987, 
+      "parent_uri": "/publication/15987", 
+      "relationship": "prov:wasDerivedFrom"
+    }
+  ], 
+  "software": "IDL", 
+  "start_time": null, 
+  "uri": "/activity/create-urban-heat-island-image", 
+  "visualization_software": null
+}

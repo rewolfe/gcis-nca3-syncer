@@ -1,0 +1,34 @@
+{
+  "contributors": [
+    {
+      "id": 4055, 
+      "organization_identifier": "iowa-state-university", 
+      "person_id": 870, 
+      "publications": [
+        {
+          "uri": "/report/usda-techbul-1935"
+        }
+      ], 
+      "role_type_identifier": "author"
+    }, 
+    {
+      "id": 978, 
+      "organization_identifier": "iowa-state-university", 
+      "person_id": 870, 
+      "publications": [
+        {
+          "uri": "/report/nca3/chapter/rural"
+        }
+      ], 
+      "role_type_identifier": "lead_author"
+    }
+  ], 
+  "first_name": "Lois Wright", 
+  "href": "https://localhost:3000/person/870.json", 
+  "id": 870, 
+  "last_name": "Morton", 
+  "middle_name": null, 
+  "orcid": null, 
+  "uri": "/person/870", 
+  "url": "http://www.soc.iastate.edu/staff/wrightmorton.html"
+}

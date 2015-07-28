@@ -1,0 +1,27 @@
+{
+  "computing_environment": null, 
+  "data_usage": null, 
+  "duration": null, 
+  "end_time": null, 
+  "href": "https://localhost:3000/activity/bf0d948c-adapt-image-wildfire-smoke-widespread-health-effects-process.json", 
+  "identifier": "bf0d948c-adapt-image-wildfire-smoke-widespread-health-effects-process", 
+  "methodologies": [], 
+  "methodology": "Added star marker for Baltimore, wildfire labels and smoke labels to Postscript image provided by K. Knowlton", 
+  "notes": null, 
+  "output_artifacts": "health_Quebec_wildfires_12788_v5.png", 
+  "publication_maps": [
+    {
+      "activity_identifier": "bf0d948c-adapt-image-wildfire-smoke-widespread-health-effects-process", 
+      "child": 16899, 
+      "child_uri": "/publication/16899", 
+      "note": "Image : bf0d948c-6081-4101-bce1-b30542a08d00 was adapted from Figure 3A of the cited article \"Impact of the 2002 Canadian Forest Fires on Particulate Matter Air Quality in Baltimore City\".", 
+      "parent": 9358, 
+      "parent_uri": "/publication/9358", 
+      "relationship": "prov:wasDerivedFrom"
+    }
+  ], 
+  "software": null, 
+  "start_time": null, 
+  "uri": "/activity/bf0d948c-adapt-image-wildfire-smoke-widespread-health-effects-process", 
+  "visualization_software": null
+}

@@ -1,0 +1,23 @@
+{
+  "contributors": [
+    {
+      "id": 4365, 
+      "organization_identifier": "stevens-institute-technology", 
+      "person_id": 2472, 
+      "publications": [
+        {
+          "uri": "/image/f27374a2-d4ef-479c-8f96-9de23fedfc3e"
+        }
+      ], 
+      "role_type_identifier": "analyst"
+    }
+  ], 
+  "first_name": "Matteo", 
+  "href": "https://localhost:3000/person/2472.json", 
+  "id": 2472, 
+  "last_name": "Ottaviani", 
+  "middle_name": null, 
+  "orcid": null, 
+  "uri": "/person/2472", 
+  "url": null
+}

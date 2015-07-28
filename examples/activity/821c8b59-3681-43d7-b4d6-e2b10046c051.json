@@ -1,0 +1,17 @@
+{
+  "computing_environment": null, 
+  "data_usage": null, 
+  "duration": null, 
+  "end_time": null, 
+  "href": "https://localhost:3000/activity/821c8b59-3681-43d7-b4d6-e2b10046c051.json", 
+  "identifier": "821c8b59-3681-43d7-b4d6-e2b10046c051", 
+  "methodologies": [], 
+  "methodology": null, 
+  "notes": null, 
+  "output_artifacts": null, 
+  "publication_maps": [], 
+  "software": null, 
+  "start_time": null, 
+  "uri": "/activity/821c8b59-3681-43d7-b4d6-e2b10046c051", 
+  "visualization_software": null
+}

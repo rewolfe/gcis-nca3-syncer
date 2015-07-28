@@ -1,0 +1,23 @@
+{
+  "attributes": null, 
+  "contributors": [], 
+  "create_dt": null, 
+  "description": "http://earthobservatory.nasa.gov/NaturalHazards/view.php?id=9826\r\nNASA image gallery search resolves to using dvidshub.net: http://www.dvidshub.net/image/753957/fires-quebec-canada-send-smoke-us-natural-hazards#.VBryHy5dVT8\r\nJacques Descloitres, jacques.descloitres@univ-lille1.fr, +33(0)3 20 33 59 80, MODIS Rapid Response Team NASA/GSFC", 
+  "files": [], 
+  "href": "https://localhost:3000/image/006e3445-181e-4e0e-a865-ded2c82dd4b8.json", 
+  "identifier": "006e3445-181e-4e0e-a865-ded2c82dd4b8", 
+  "lat_max": null, 
+  "lat_min": null, 
+  "lon_max": null, 
+  "lon_min": null, 
+  "parents": [], 
+  "position": null, 
+  "references": [], 
+  "submission_dt": null, 
+  "time_end": "2002-07-07T16:40:00", 
+  "time_start": "2002-07-07T16:30:00", 
+  "title": "NASA Earth Observatory Image: Fires in Quebec, Canada, Send Smoke to U.S.", 
+  "uri": "/image/006e3445-181e-4e0e-a865-ded2c82dd4b8", 
+  "url": null, 
+  "usage_limits": null
+}

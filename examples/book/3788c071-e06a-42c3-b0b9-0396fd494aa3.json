@@ -1,0 +1,35 @@
+{
+  "contributors": [
+    {
+      "href": "https://localhost:3000/contributor/1392.json", 
+      "id": 1392, 
+      "organization": {
+        "country_code": null, 
+        "identifier": "world-resources-institute", 
+        "name": "World Resources Institute", 
+        "organization_type_identifier": "international", 
+        "url": "http://www.wri.org"
+      }, 
+      "organization_uri": "/organization/world-resources-institute", 
+      "person": {}, 
+      "person_id": null, 
+      "person_uri": null, 
+      "role_type_identifier": "author", 
+      "uri": "/contributor/1392"
+    }
+  ], 
+  "files": [], 
+  "href": "https://localhost:3000/book/3788c071-e06a-42c3-b0b9-0396fd494aa3.json", 
+  "identifier": "3788c071-e06a-42c3-b0b9-0396fd494aa3", 
+  "in_library": null, 
+  "isbn": "9781569737620", 
+  "number_of_pages": "130", 
+  "parents": [], 
+  "publisher": "World Resources Institute", 
+  "references": [], 
+  "title": "Reefs at Risk Revisited", 
+  "topic": null, 
+  "uri": "/book/3788c071-e06a-42c3-b0b9-0396fd494aa3", 
+  "url": "http://pdf.wri.org/reefs_at_risk_revisited.pdf", 
+  "year": "2011"
+}

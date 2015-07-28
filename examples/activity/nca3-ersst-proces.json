@@ -1,0 +1,27 @@
+{
+  "computing_environment": null, 
+  "data_usage": null, 
+  "duration": null, 
+  "end_time": null, 
+  "href": "https://localhost:3000/activity/nca3-ersst-proces.json", 
+  "identifier": "nca3-ersst-proces", 
+  "methodologies": [], 
+  "methodology": null, 
+  "notes": null, 
+  "output_artifacts": null, 
+  "publication_maps": [
+    {
+      "activity_identifier": "nca3-ersst-proces", 
+      "child": 16589, 
+      "child_uri": "/publication/16589", 
+      "note": "", 
+      "parent": 18364, 
+      "parent_uri": "/publication/18364", 
+      "relationship": "prov:wasDerivedFrom"
+    }
+  ], 
+  "software": null, 
+  "start_time": null, 
+  "uri": "/activity/nca3-ersst-proces", 
+  "visualization_software": null
+}
