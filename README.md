@@ -7,7 +7,7 @@ Install
 ```
 $ ./install.sh
 ```
-2. Ensure you've set up GCIS credentials in $HOME/etc/Gcis.conf:
+1. Ensure you've set up GCIS credentials in $HOME/etc/Gcis.conf:
 ```
 $ cat ~/etc/Gcis.conf
 ---
@@ -15,7 +15,7 @@ $ cat ~/etc/Gcis.conf
   userinfo : gmanipon:<GCIS API key>
   key      : <GCIS API key>
 ```
-3. Make sure GCIS web app is running.
+1. Make sure GCIS web app is running.
 
 
 Updated Figure 9.3 - Wildfire Smoke has Widespread Health Effects
