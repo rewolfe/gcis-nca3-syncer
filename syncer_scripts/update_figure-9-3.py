@@ -8,6 +8,9 @@ from gcis_clients import GcisClient
 log_format = "[%(asctime)s: %(levelname)s/%(funcName)s] %(message)s"
 logging.basicConfig(format=log_format, level=logging.INFO)
 
+# disable unverified HTTPS warnings
+requests.packages.urllib3.disable_warnings()
+
 
 def update(url):
     """Updated GCIS for this figure."""
