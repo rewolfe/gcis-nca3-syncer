@@ -4,7 +4,7 @@ Syncer script to update a GCIS endpoint with missing NCA3 figures, datasets, etc
 Install
 -------
 
-1. Install:
+1. Install virtual environment and dependencies:
  ```
  $ ./install.sh
  ```
