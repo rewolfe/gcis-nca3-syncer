@@ -26,3 +26,10 @@ Updated Figure 9.3 - Wildfire Smoke has Widespread Health Effects
 ```
 $ ./update_figure-9-3.sh https://localhost:3000
 ```
+
+
+Updated Figure 16.5 - Urban Heat Island
+---------------------------------------
+```
+$ ./update_figure-16-5.sh https://localhost:3000
+```
