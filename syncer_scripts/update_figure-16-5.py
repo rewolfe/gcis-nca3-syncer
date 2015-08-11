@@ -29,7 +29,7 @@ def update(url):
         "title": "Urban Heat Island",
         "url": "http://nca2014.globalchange.gov/highlights/regions/northeast/graphics/urban-heat-island",
         "usage_limits": "Copyright protected. Obtain permission from the original figure source.",
-        "caption": "Surface temperatures in New York City on a summer\u2019s day show the \u201curban heat island,\u201d with temperatures in populous urban areas being approximately 10\u00b0F higher than the forested parts of Central Park. Dark blue reflects the colder waters of the Hudson and East Rivers. (Figure source: Center for Climate Systems Research, Columbia University).",
+        "caption": u"Surface temperatures in New York City on a summer\u2019s day show the \u201curban heat island,\u201d with temperatures in populous urban areas being approximately 10\u00b0F higher than the forested parts of Central Park. Dark blue reflects the colder waters of the Hudson and East Rivers. (Figure source: Center for Climate Systems Research, Columbia University).",
         "source_citation": "Center for Climate Systems Research, Columbia University",
         "ordinal": 5,
         "lat_max": "41.27462",
