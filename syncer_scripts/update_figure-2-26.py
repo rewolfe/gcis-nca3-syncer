@@ -35,6 +35,7 @@ def update(url):
 #    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
 #    r.raise_for_status()
 
+   
 
 
 if __name__ == "__main__":
