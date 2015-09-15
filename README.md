@@ -33,3 +33,8 @@ Updated Figure 16.5 - Urban Heat Island
 ```
 $ ./update_figure-16-5.sh https://localhost:3000
 ```
+
+Scripts that are currently ready to use:
+  update_figure-16-5.sh
+  update_figure-34-16.sh
+  update_figure-9-3.sh
