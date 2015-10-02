@@ -70,8 +70,46 @@ def update(url):
     r.raise_for_status()
 
 
+    
+    #add dataset
+    dataset_id = "nasa-laads-mod021km-collection6"
+    href = "/dataset/"
+    update_url = "%s%s"%(url,href)
+    check_url = "%s%s"%(update_url, dataset_id)
+    if requests.get(check_url, verify=False).status_code ==200:
+        update_url = check_url
+    data = {
+        'identifier': dataset_id,
+        'lat_max': "90",
+        'start_time': "2002-07-04T00:00:00",
+        'native_id': "MYD021KM",
+        'lon_max': "180",
+        'name': "MODIS/AQUA Calibrated Radiances L1B Swath 1km (Collection 006)",
+        'lon_min': "-180",
+        'lat_min': "-90",
+        'description': "MODIS image data at 1km (Nadir) resolution, calibrated from raw counts into physically meaningful radiances and reflectances. Corrections for known instrument effects are applied, include cross-talk between different bands. Data for the 500m and 250m bands are aggregated up to 1km resolution. Also includes quality flags, error estimates, and a 5km X 5km sub-sample of all geolocation data from the MYD03 files. ",
+    }
+
+    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
+    r.raise_for_status()
+
+    #add dataset contributors
+    href = "/dataset/contributors/%s"%dataset_id
+    update_url = "%s%s"%(url,href)
+    ds_conts = [
+        {
+            'role':"data_archive",
+            'organization_identifier':'l1-atmospheric-archive-distribution-system',
+        }
+    ]
+    for data in ds_conts:
+        r = gcis.s.post(update_url, data=json.dumps(data),verify=False)
+        r.raise_for_status()
+
+
+
     #add activity
-    act_id = "3fa57f0d-64c4-4b08-8e00-1558bfdb94f8"
+    act_id = "a40895b4-create-image-flooding_hurricane_irene-process"
     href = "/activity/"
     update_url = "%s%s"%(url,href)
     check_url = "%s%s" % (update_url, act_id)
@@ -79,64 +117,33 @@ def update(url):
         update_url = check_url
     data = {
         'identifier': act_id,
-        'methodology': "The input granules were mosaicked and subset to extract the desired area to display the region covered by Hurricane Irene. ", 
-        'output_artifacts':"MYD021KM.A2011240.1750.006.2012076212937.hdf"
+        'notes': "There is no image on earthobservatory or MODIS Rapid Response System that matched the image in the figure. The image might have existed in the MODIS Rapid Response System in 2011, but is part of the data that was lost due to a disk crash in 2013. It has not been restored, and may be restored when MODIS Collection 6 processing is completed.",
+        'methodology': "Two MODIS Aqua dataset MYD021KM input granules were mosaicked and subset to extract the desired area to display the region covered by Hurricane Irene. The following two inputs were used.\n\n1. MODIS Aqua dataset MYD021KM granule MYD021KM.A2011240.1750.006.2012076212937.hdf (August 28, 2011, 17:50 UTC)\nftp://ladsftp.nascom.nasa.gov/allData/6/MYD021KM/2011/240/MYD021KM.A2011240.1750.006.2012076212937.hdf\n\n2. MODIS Aqua dataset MYD021KM granule MYD021KM.A2011240.1755.006.2012076211459.hdf  (August 28, 2011, 17:55 UTC)\nftp://ladsftp.nascom.nasa.gov/allData/6/MYD021KM/2011/240/MYD021KM.A2011240.1755.006.2012076211459.hdf\n\nThe landing page for MODIS Aqua dataset MYD021KM: http://gcmd.gsfc.nasa.gov/KeywordSearch/Metadata.do?Portal=lance&KeywordPath=%5BLocation%3A+Location_Category%3D%27OCEAN%27%2C+Location_Type%3D%27INDIAN+OCEAN%27%5D&OrigMetadataNode=GCMD&EntryId=MYD021KM&MetadataView=Full&MetadataType=0&lbnode=mdlb5",
+        'output_artifacts':"/report/nca3/chapter/northeast/figure/flooding-and-hurricane-irene"
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
 
 
-#add derivation from activity to image
-    href = "/image/prov/%s" %img_id
-    update_url = "%s%s" %(url, href)
-
-    fig_id = "flooding-and-hurricane-irene"
-    fig_href = "/report/nca3/chapter/northeast/figure/%s"%fig_id
-    
-    data = {
-        'parent_uri': fig_href,
-        "parent_rel": 'prov:wasDerivedFrom',
-        'activity': act_id,
-    }
-    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
-    r.raise_for_status()
-
-
-    #add activity2
-    act_id = "789cf0c9-ab26-4c0f-a79c-c6bb516d0a8b"
+    #add derivation from activity to image
+    dataset_id = "nasa-laads-mod021km-collection6"
+    href = "/dataset/"
+    dataset_href = "%s%s"%(href,dataset_id)
+    act_id = "a40895b4-create-image-flooding_hurricane_irene-process"
     href = "/activity/"
-    update_url = "%s%s"%(url,href)
-    check_url = "%s%s" %(update_url, act_id)
-    if requests.get(check_url, verify=False).status_code == 200:
-        update_url = check_url
-    data = {
-        "identifier": act_id,
-        "methodology": "The input granules were mosaicked and subset to extract the desired area to display the region covered by Hurricane Irene. ",
-        "output_artifacts": "The input granules were mosaicked and subset to extract the desired area to display the region covered by Hurricane Irene. "
-    }
-    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
-    r.raise_for_status()
-
-    #add derivation from activity 2i to image
+    act_href = "%s%s"%(href,act_id)
+    img_id = "a40895b4-9e23-4fc6-a476-c4eb9dc1efd1"
     href = "/image/prov/%s" %img_id
     update_url = "%s%s" %(url, href)
-
-    fig_id = "flooding-and-hurricane-irene"
-    fig_href = "/report/nca3/chapter/northeast/figure/%s"%fig_id
-    
-    
+    #fig_id = "flooding-and-hurricane-irene"
+    #fig_href = "/report/nca3/chapter/northeast/figure/%s"%fig_id
     data = {
-
-
-        'parent_uri': fig_href,
+        'parent_uri': dataset_href,
         "parent_rel": 'prov:wasDerivedFrom',
         'activity': act_id,
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
-
-
-
 if __name__ == "__main__":
     desc = "Updated Figure 16.3: Flooding and Hurricane Irene"
     parser = argparse.ArgumentParser(description=desc)
