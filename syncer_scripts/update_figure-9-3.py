@@ -68,7 +68,10 @@ def update(url):
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
 
-    #account for activity 1
+
+
+
+#account for activity 1
     act_id = "earth_obsv-image-wildfire-smoke-widespread-health-effects-process"
     href = "/activity/"
     update_url = "%s%s" % (url, href)
@@ -83,6 +86,22 @@ def update(url):
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
 
+    # add derivation prov relating to activity
+    href = "/image/prov/%s" % img_id
+    update_url = "%s%s" % (url, href)
+    data = {
+            'parent_uri': "/image/%s"%img_id,
+            'parent_rel': 'prov:wasDerivedFrom',
+            'activity': act_id,
+            'note': "Image : bf0d948c-6081-4101-bce1-b30542a08d00 was created by activity %s"%act_id,
+            }
+    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
+    r.raise_for_status()
+
+
+
+    
+    
     #account for activity_2 
     act_id = "earth_obsv_2-image-wildfire-smoke-widespread-health-effects-process"
     href = "/activity/"
@@ -98,6 +117,22 @@ def update(url):
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
+
+
+    # add derivation prov relating to activity
+    href = "/image/prov/%s" % img_id
+    update_url = "%s%s" % (url, href)
+    data = {
+            #seems like it should be  http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg that is linked as parent
+            'parent_uri': " http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg",#v"/image/%s"%img_id,
+            'parent_rel': 'prov:wasDerivedFrom',
+            'activity': act_id,
+            'note': "Image : bf0d948c-6081-4101-bce1-b30542a08d00 was created by activity %s"%act_id,
+            }
+    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
+    r.raise_for_status()
+
+
 
     #account for activity_3 
     act_id = "earth_obsv_3-image-wildfire-smoke-widespread-health-effects-process"
@@ -115,7 +150,30 @@ def update(url):
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
 
+# add derivation prov relating to activity
+    href = "/image/prov/%s" % img_id
+    update_url = "%s%s" % (url, href)
+    data = {
+            'parent_uri': "http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=Canada.A2002188.1635.2km.jpg",#"/image/%s"%img_id,
+            'parent_rel': 'prov:wasDerivedFrom',
+            'activity': act_id,
+            'note': "Image : bf0d948c-6081-4101-bce1-b30542a08d00 was created by activity %s"%act_id,
+            }
+    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
+    r.raise_for_status()
 
+
+# add derivation prov relating to activity
+    href = "/image/prov/%s" % img_id
+    update_url = "%s%s" % (url, href)
+    data = {
+            'parent_uri': "http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg",#"/image/%s"%img_id,
+            'parent_rel': 'prov:wasDerivedFrom',
+            'activity': act_id,
+            'note': "Image : bf0d948c-6081-4101-bce1-b30542a08d00 was created by activity %s"%act_id,
+            }
+    r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
+    r.raise_for_status()
 
 if __name__ == "__main__":
     desc = "Updated Figure 9.3: Wildfire Smoke has Widespread Health Effects"
