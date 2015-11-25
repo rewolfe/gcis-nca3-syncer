@@ -33,7 +33,7 @@ def update(url):
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
-
+    
 
     #add parent/deriving webpage
     web_id = "c57946b1-f413-491f-b75c-1c08f7594f84"
@@ -41,7 +41,7 @@ def update(url):
     update_url = "%s%s" %(url,web_href)
     data = {
         "identifier": web_id,
-        "url": "http://eoimages.gsfc.nasa.gov/images/imagerecords/51000/51957/irene_amo_2011240_lrg.jpg",
+        "url": "http://eoimages.gsfc.nasa.gov/images/imagerecords/51000/51957/irene_amo_2011240_lrg.jpg", 
         "title": "Hurricane Irene over the U.S. Northeast : Natural Hazards",
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
@@ -56,7 +56,7 @@ def update(url):
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
-
+    
     #add dataset
     dataset_id = "nasa-laads-myd021km_v6"
     update_url = "%s/dataset/%s" %(url,dataset_id)
