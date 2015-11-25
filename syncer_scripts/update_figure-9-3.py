@@ -114,7 +114,7 @@ def update(url):
         update_url = check_url
     data = {
             'identifier': act_id,
-            'methodology':"The two input images were subsetted and merged to generate the output.",
+            'methodology':"The two input images were subsetted and mosaicked to generate the output.",
 #            'input_artifacts': "",
             'output_artifacts': "Image fires-in-quebec-canada",#"http://earthobservatory.nasa.gov/NaturalHazards/view.php?id=9826",
             'notes':"Two images from NASAâ€™s MODIS Rapid Response System http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=Canada.A2002188.1635.2km.jpg and http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg",
