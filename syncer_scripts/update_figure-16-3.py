@@ -30,6 +30,7 @@ def update(url):
             "create_dt": "2014-03-04T10:34:00",
             "time_end": "2011-08-29T23:59:59",
             "time_start": "2011-08-29T00:00:00",
+            "title": "Flooding and Hurricane Irene",
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
@@ -59,7 +60,10 @@ def update(url):
     
     #add dataset
     dataset_id = "nasa-laads-myd021km_v6"
-    update_url = "%s/dataset/%s" %(url,dataset_id)
+    update_url = "%s/dataset/" %url
+    check_url = "%s%s" %(update_url, dataset_id)
+    if requests.get(check_url, verify=False).status_code ==200:
+        update_url = check_url
     data = {
         'identifier': dataset_id,
         'lat_max': "90",
@@ -102,11 +106,14 @@ def update(url):
 
     #add activity
     act_id = "a40895b4-create-image-flooding_hurricane_irene-process"
-    update_url = "%s/activity/%s" %(url,act_id)
+    update_url = "%s/activity/" %url
+    check_url = "%s%s" %(update_url, act_id)
+    if requests.get(check_url, verify=False).status_code ==200:
+        update_url = check_url
     data = {
         'identifier': act_id,
         'notes': "There is no image on earthobservatory or MODIS Rapid Response System that matched the image in the figure. The image might have existed in the MODIS Rapid Response System in 2011, but is part of the data that was lost due to a disk crash in 2013. It has not been restored, and may be restored when MODIS Collection 6 processing is completed.",
-        'methodology': "Two MODIS Aqua dataset MYD021KM input granules were mosaicked and subset to extract the desired area to display the region covered by Hurricane Irene. The following two inputs were used.\n\n1. MODIS Aqua dataset MYD021KM granule MYD021KM.A2011240.1750.006.2012076212937.hdf (August 28, 2011, 17:50 UTC)\nftp://ladsftp.nascom.nasa.gov/allData/6/MYD021KM/2011/240/MYD021KM.A2011240.1750.006.2012076212937.hdf\n\n2. MODIS Aqua dataset MYD021KM granule MYD021KM.A2011240.1755.006.2012076211459.hdf  (August 28, 2011, 17:55 UTC)\nftp://ladsftp.nascom.nasa.gov/allData/6/MYD021KM/2011/240/MYD021KM.A2011240.1755.006.2012076211459.hdf\n\nThe landing page for MODIS Aqua dataset MYD021KM: http://gcmd.gsfc.nasa.gov/KeywordSearch/Metadata.do?Portal=lance&KeywordPath=%5BLocation%3A+Location_Category%3D%27OCEAN%27%2C+Location_Type%3D%27INDIAN+OCEAN%27%5D&OrigMetadataNode=GCMD&EntryId=MYD021KM&MetadataView=Full&MetadataType=0&lbnode=mdlb5",
+        'methodology': "Two MODIS Aqua dataset MYD021KM input granules were mosaicked and subset to extract the desired area to display the region covered by Hurricane Irene. The following two inputs were used.\n\n1. MODIS Aqua dataset MYD021KM granule MYD021KM.A2011240.1750.006.2012076212937.hdf (August 28, 2011, 17:50 UTC)\nftp://ladsftp.nascom.nasa.gov/allData/6/MYD021KM/2011/240/MYD021KM.A2011240.1750.006.2012076212937.hdf\n\n2. MODIS Aqua dataset MYD021KM granule MYD021KM.A2011240.1755.006.2012076211459.hdf  (August 28, 2011, 17:55 UTC)\nftp://ladsftp.nascom.nasa.gov/allData/6/MYD021KM/2011/240/MYD021KM.A2011240.1755.006.2012076211459.hdf\n\nThe landing page for MODIS Aqua dataset MYD021KM: http://gcmd.gsfc.nasa.gov/KeywordSearch/Metadata.do?Portal=lance&EntryId=MYD021KM&MetadataView=Full",
         'output_artifacts':"/report/nca3/chapter/northeast/figure/flooding-and-hurricane-irene"
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
