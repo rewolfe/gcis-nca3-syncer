@@ -75,7 +75,7 @@ def update(url):
 
 
 #account for activity 1
-    act_id = "earth_obsv-image-wildfire-smoke-widespread-health-effects-process"
+    act_id = "earth_obsv_1-image-wildfire-smoke-widespread-health-effects-process"
     href = "/activity/"
     update_url = "%s%s" % (url, href)
     check_url = "%s%s" % (update_url, act_id)
@@ -83,7 +83,7 @@ def update(url):
         update_url = check_url
     data = {
             'identifier': act_id,
-            'methodology': "xxx copied the input image and placed a star to mark Baltimore, MD and highlighted fire locations in Quebec.",
+            'methodology': "The input image was copied and a star placed on it to mark Baltimore, MD and highlighted fire locations in Quebec.",
             'output_artifacts': "http://earthobservatory.nasa.gov/NaturalHazards/view.php?id=9826",
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
@@ -117,7 +117,7 @@ def update(url):
             'methodology':"The two input images were subsetted and mosaicked to generate the output.",
 #            'input_artifacts': "",
             'output_artifacts': "Image fires-in-quebec-canada",#"http://earthobservatory.nasa.gov/NaturalHazards/view.php?id=9826",
-            'notes':"Two images from NASAâ€™s MODIS Rapid Response System http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=Canada.A2002188.1635.2km.jpg and http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg",
+            'notes':"Two images from NASA's MODIS Rapid Response System: \nhttp://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=Canada.A2002188.1635.2km.jpg and \nhttp://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg",
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
@@ -147,7 +147,7 @@ def update(url):
         update_url = check_url
     data = {
             'identifier': act_id,
-            'methodology': "The two input images are processed to corrected reflectance images by a process described in the document https://earthdata.nasa.gov/files/MODIS_True_Color.pdf. Also, to generate the two images on the Rapid Response System, the two corresponding granules of the MODIS fire product are overlaid. When the images were generated in 2002, a system at University of Maryland was being used for the MODIS fire products. That system used an algorithm identical to the one used for the MODIS product MOD14 (Thermal Anomalies - Fires and Biomass Burning) which is currently available from Land Processes (LP) DAAC. The two granules can be obtained from LP DAAC using the links: http://e4ftl01.cr.usgs.gov//MODIS_Dailies_C/MOLT/MOD14.005/2002.07.07/MOD14.A2002188.1630.005.2011273181127.hdf and http://e4ftl01.cr.usgs.gov//MODIS_Dailies_C/MOLT/MOD14.005/2002.07.07/MOD14.A2002188.1635.005.2011273181055.hdf.It is to be noted that there may be very slight differences in the geolocation of the fires between these granules and the ones on the Rapid Response System due to the use of predictive ephemeris in the latter vs definitive ephemeris in the former. (Use of predictive ephemeris is standard practice for near real-time products because of the latency constraints.)Details about the MODIS fire products can be found in https://earthdata.nasa.gov/files/MODIS_Fire_Users_Guide_2.5.pdf. The Algorithm Theoretical Basis Document for MOD14 is at http://modis.gsfc.nasa.gov/data/atbd/atbd_mod14.pdf.",
+            'methodology': "Activity steps:\n  1. The two input images are processed to corrected reflectance images by a process described in the document https://earthdata.nasa.gov/files/MODIS_True_Color.pdf.\n  2. To generate the two images on the Rapid Response System, the two corresponding granules of the MODIS fire product are overlaid.\n\nNotes:\n  1. When the images were generated in 2002, a system at University of Maryland was being used for the MODIS fire products. That system used an algorithm identical to the one used for the MODIS product MOD14 (Thermal Anomalies - Fires and Biomass Burning) which is currently available from Land Processes (LP) DAAC. The two granules can be obtained from LP DAAC using the links: http://e4ftl01.cr.usgs.gov//MODIS_Dailies_C/MOLT/MOD14.005/2002.07.07/MOD14.A2002188.1630.005.2011273181127.hdf and http://e4ftl01.cr.usgs.gov//MODIS_Dailies_C/MOLT/MOD14.005/2002.07.07/MOD14.A2002188.1635.005.2011273181055.hdf.\n  2. There may be very slight differences in the geolocation of the fires between these granules and the ones on the Rapid Response System due to the use of predictive ephemeris in the latter vs definitive ephemeris in the former. (Use of predictive ephemeris is standard practice for near real-time products because of the latency constraints.)\n  3. Details about the MODIS fire products can be found in https://earthdata.nasa.gov/files/MODIS_Fire_Users_Guide_2.5.pdf. The Algorithm Theoretical Basis Document for MOD14 is at http://modis.gsfc.nasa.gov/data/atbd/atbd_mod14.pdf.",
             'output_artifacts': "Two images in NASA's MODIS Rapid Response System http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=Canada.A2002188.1635.2km.jpg and http://lance-modis.eosdis.nasa.gov/cgi-bin/imagery/single.cgi?image=EastCoast.A2002188.1635.1km.jpg",
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
@@ -203,7 +203,7 @@ def update(url):
             'url': "/dataset/nasa-laads-mod021km-collection6",
             'relationship': "prov:wasDerivedFrom",
             'label': "dataset nasa-laads-mod021km-collection6",
-            'activity_uri': "/activity/earth_obsv_3-image-wildfire-smoke-widespread-health-effects-process"
+            'activity_uri': "/activity/_1earth_obsv_3-image-wildfire-smoke-widespread-health-effects-process"
     }
     r = gcis.s.post(update_url, data=json.dumps(data), verify=False)
     r.raise_for_status()
@@ -212,7 +212,7 @@ def update(url):
 
 
         #add dataset
-    dataset_id = "nasa-laads-mod021km-collection6"
+    dataset_id = "nasa-laads-myd021km_v6"
     href = "/dataset/"
     update_url = "%s%s"%(url,href)
     check_url = "%s%s"%(update_url, dataset_id)
